@@ -30,7 +30,7 @@ namespace QuickSort
 
 
             //get array elements
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 Console.Write("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
@@ -89,7 +89,7 @@ namespace QuickSort
             }
             //j now contains the index of the last element in the sorted list
 
-            if(low < j)
+            if (low < j)
             {
                 //Move the pivot to its correct position in the list
                 swap(low, j);
@@ -118,6 +118,22 @@ namespace QuickSort
         int getSize()
         {
             return n;
+        }
+
+        static void Main(string[] args)
+        {
+            //Declaring the object of the class
+            Program myList = new Program();
+            //Accept array elements
+            myList.input();
+            //Calling the sorting function
+            //First call to quick sort Algorithm
+            myList.q_sort(0, myList.getSize() - 1);
+            //Display sorted away
+            myList.display();
+            //to exit from the console
+            Console.WriteLine("\n\nPress Enter to Exit.");
+            Console.Read();
         }
     }
 }
