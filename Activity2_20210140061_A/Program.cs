@@ -99,7 +99,7 @@ namespace QuickSort
 
             q_sort(low, j - 1);
 
-            //
+            //sort the list on the right of pivot using quick sort
             q_sort(j + 1, high);
         }
         void display()
@@ -114,6 +114,10 @@ namespace QuickSort
             }
             Console.WriteLine("\nNumber of Comparisons : " + cmp_count);
             Console.WriteLine("\nNumber of Data Movements : " + mov_count);
+        }
+        int getSize()
+        {
+            return n;
         }
     }
 }
